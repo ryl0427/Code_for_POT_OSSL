@@ -285,7 +285,7 @@ def main():
     model.zero_grad()
     train(args, labeled_trainloader, unlabeled_trainloader, test_loader,
           model, optimizer, ema_model, scheduler)
-    logger.info(f"  Task = {args.dataset}@{args.known_class}@{args.label_per_class}@{args.known_class}")
+    logger.info(f"  Task = {args.dataset}@{args.known_class}@{args.label_per_class}")
 
 def train(args, labeled_trainloader, unlabeled_trainloader, test_loader,
           model, optimizer, ema_model, scheduler):
